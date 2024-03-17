@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmoreno <shmoreno@student.42lausanne.ch>  +#+  +:+       +#+        */
+/*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:17:41 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/10/23 13:17:42 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 18:14:37 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Write a string to a file descriptor
 void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
@@ -25,10 +26,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-/*
-int	main(void)
-{
-	char *test = 0;
-	ft_putstr_fd(test, 1);
-	return (0);
-}*/

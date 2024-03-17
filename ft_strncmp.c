@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// Compare the first n bytes of two strings s1 and s2
 int	ft_strncmp(const char *s1, const char *s2, int size)
 {
 	int	i;
@@ -28,11 +29,3 @@ int	ft_strncmp(const char *s1, const char *s2, int size)
 	}
 	return (0);
 }
-/*
-int	main(void)
-{
-	//char *chaine = "axexxx";
-	//char *caractere = "axxxxx";
-	printf("%d", ft_strncmp("abcdef", "abc\375xx", 5));
-	return (0);
-}*/

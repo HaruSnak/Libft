@@ -6,12 +6,13 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:19:10 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/11/02 16:10:19 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 18:14:18 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Concatenate two strings
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;
@@ -40,19 +41,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr[p] = '\0';
 	return (ptr);
 }
-/*
-int	main(void) {
-	//const char *s1 = "Bonjour, ";
-	//const char *s2 = "comment ça va ?";
-
-	char *result = ft_strjoin("abc", "");
-	if (result) {
-		printf("La chaîne concaténée est : %s\n", result);
-		free(result);
-			// N'oubliez pas de libérer la mémoire allouée dynamiquement
-	} else {
-		printf("Erreur : la fonction ft_strjoin a retourné NULL.\n");
-	}
-
-	return (0);
-}*/

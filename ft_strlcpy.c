@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// Copy the string src to dest
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
@@ -30,11 +31,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		i++;
 	return (i);
 }
-/*
-int	main(void)
-{
-	//char source[] = "aaa";
-	char destination[20];
-
-	printf("%ld", ft_strlcpy(destination, "aaa", 0));
-}*/

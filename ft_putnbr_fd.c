@@ -6,12 +6,13 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:17:31 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/11/03 12:12:09 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 18:14:47 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Write a number to the specified file descriptor
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	nb;
@@ -29,11 +30,3 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	ft_putchar_fd(nb + '0', fd);
 }
-/*
-int main(void)
-{
-	int test = -2147483648;
-	ft_putnbr_fd(test, 1);
-
-	return (0);
-}*/

@@ -6,12 +6,15 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:23:52 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/11/03 16:23:59 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 18:14:04 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Apply the function f to each character of the string passed as argument
+//by giving its index as first argument to create a new string resulting
+//from the successive applications of f.
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
@@ -29,23 +32,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ptr[i] = '\0';
 	return (ptr);
 }
-/*
-char	add_index(unsigned int index, char c) {
-	return (c + index); // Incrémente chaque caractère par son index
-}
-
-int	main(void) {
-	const char *test_string = "abcd";
-	printf("Chaîne initiale : %s\n", test_string);
-
-	char *result_string = ft_strmapi(test_string, &add_index);
-
-	if (result_string) {
-		printf("Résultat de strmapi : %s\n", result_string);
-		free(result_string); // Libérer la mémoire allouée dynamiquement
-	} else {
-		printf("Une erreur s'est produite lors de l'exécution de strmapi.\n");
-	}
-
-	return (0);
-}*/

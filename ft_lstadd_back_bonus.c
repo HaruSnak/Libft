@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 14:26:43 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/10/27 14:26:45 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 18:06:03 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Add a new element at the end of the list
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*temp;

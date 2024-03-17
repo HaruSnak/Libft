@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmoreno <shmoreno@student.42lausanne.ch>  +#+  +:+       +#+        */
+/*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:17:22 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/10/23 13:17:23 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 18:14:49 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Write a string to a file descriptor followed by a newline
 void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
@@ -26,10 +27,3 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	ft_putchar_fd('\n', fd);
 }
-/*
-int	main(void)
-{
-	char *test = "Bonjour les potes !";
-	ft_putendl_fd(test, 1);
-	return (0);
-}*/

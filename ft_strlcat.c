@@ -6,12 +6,15 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:19:22 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/11/01 17:19:24 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 18:14:14 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Append the string src to the end of dest. It will append at most
+//size - strlen(dest) - 1 characters. It will then NUL-terminate,
+//unless size is less than strlen(dest).
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	dst_len;
@@ -35,11 +38,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	else
 		return (ft_strlen(src) + dst_len);
 }
-/*
-int	main(void)
-{
-	//char *source = 0;
-	//char destination[20] = "Hello, ";
-
-	printf("%ld", ft_strlcat("pqrstuvwxyz", "abcd", 2));
-}*/

@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// Locate a substring in a string with a maximum length
 char	*ft_strnstr(const char *str, const char *to_find, size_t size)
 {
 	size_t	i;
@@ -32,26 +33,3 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t size)
 	}
 	return (NULL);
 }
-/*
-int	main(void) {
-	char *haystack = "Bonjour, toujours tout le monde !";
-	char *needle = "tout";
-	size_t len = ft_strlen(haystack);
-
-	char *ptr = ft_strnstr(haystack, needle, len);
-
-	if (ptr) {
-		printf("La sous-chaîne '%s' a été trouvée à l'adresse : %p\n", needle,
-			ptr);
-	} else {
-		printf("La sous-chaîne '%s' n'a pas été trouvée dans la chaîne.\n",
-			needle);
-	}
-
-	return (0);
-}
-int main(void)
-{
-	printf("%p\n", ft_strnstr("abc", "xyz", 1));
-	return (0);
-}*/

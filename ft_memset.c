@@ -6,12 +6,14 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:16:50 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/11/03 15:54:37 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 18:14:56 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Fill the first len bytes of the memory area pointed to by s with
+//the constant byte c.
 void	*ft_memset(void *s, int c, size_t len)
 {
 	size_t	i;
@@ -24,15 +26,3 @@ void	*ft_memset(void *s, int c, size_t len)
 	}
 	return (s);
 }
-/*
-int	main(void)
-{
-	//char str[50] = "Hello, world!";
-	//printf("Avant memset : %s\n", str);
-
-	//ft_memset(((void*)0), '0', 5); // Remplir les 5 premiers caractères avec 'A'
-
-	printf("Après memset : %s\n", ft_memset(((void*)0), 'a', 12));
-
-	return (0);
-}*/

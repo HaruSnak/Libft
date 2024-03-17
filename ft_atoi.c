@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
+// Convert a string to an integer
 int	ft_atoi(const char *str)
 {
 	size_t	number;
@@ -37,9 +38,3 @@ int	ft_atoi(const char *str)
 	}
 	return (number * negativ_number);
 }
-/*
-int	main(void)
-{
-	printf("%d", ft_atoi("--123"));
-	return (0);
-}*/

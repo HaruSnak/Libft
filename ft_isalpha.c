@@ -12,22 +12,10 @@
 
 #include "libft.h"
 
+// Check if the character is alphabetic
 int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
 	return (0);
 }
-/*
-int main() {
-    char test_char = 'A';
-    int result = ft_isalpha(test_char);
-
-    if (result == 1) {
-        printf("%c est une lettre alphabétique.\n", test_char);
-    } else {
-        printf("%c n'est pas une lettre alphabétique.\n", test_char);
-    }
-
-    return 0;
-}*/

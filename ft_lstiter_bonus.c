@@ -6,12 +6,14 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 16:15:04 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/11/05 16:15:20 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 18:06:53 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Iterates the list ’lst’ and applies the function ’f’ to the
+//content of each element.
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst && f)

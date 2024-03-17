@@ -6,12 +6,13 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:08:32 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/11/03 15:08:35 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 18:14:33 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Count the number of words in a string
 static int	word_count(const char *s, char c)
 {
 	int	count;
@@ -90,17 +91,3 @@ char	**ft_split(char const *s, char c)
 	result = allocate_words(s, c, count);
 	return (result);
 }
-/*int main() {
-    const char *s = "";
-    char c = 'i';
-
-    char **result = ft_split(s, c);
-
-    for (int i = 0; result[i] != NULL; i++) {
-        printf("%s\n", result[i]);
-        free(result[i]);  // Libère la mémoire allouée dynamiquement
-    }
-    free(result);  
-
-    return (0);
-}*/

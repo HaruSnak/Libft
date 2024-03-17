@@ -6,12 +6,14 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:32:36 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/11/03 15:21:27 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 18:13:52 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Allocates and returns a substring from the string ’s’.
+//The substring begins at index ’start’ and is of maximum size ’len’.
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
@@ -37,20 +39,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr[i] = '\0';
 	return (ptr);
 }
-/*
-int	main(void) {
-	//const char *original_string = "Example String for Testing";
-	//unsigned int start_index = 8;
-	//size_t length = 20;
-
-	char *result = ft_substr("hola", 4294967295, 0);
-	if (result == NULL) {
-		printf("La sous-chaîne n'a pas pu être extraite.\n");
-		return (1);
-	}
-
-	printf("La sous-chaîne extraite est : %s\n", result);
-
-	free(result); // Libération de la mémoire allouée pour la sous-chaîne
-	return (0);
-}*/

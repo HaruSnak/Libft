@@ -6,12 +6,13 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:16:41 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/11/03 17:34:22 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 18:15:00 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Copy memory area (handle overlapping) 
 void	*ft_memmove(void *dest, void *src, size_t n)
 {
 	int	i;
@@ -38,15 +39,3 @@ void	*ft_memmove(void *dest, void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-int	main(void) {
-	char str[] = "Hello, world!";
-	printf("Avant memmove : %s\n", str);
-
-	// Déplacer les 7 premiers caractères deux positions vers la droite
-	ft_memmove(str + 2, str, 7);
-
-	printf("Après memmove : %s\n", str);
-
-	return (0);
-}*/

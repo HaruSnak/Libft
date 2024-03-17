@@ -12,15 +12,10 @@
 
 #include "libft.h"
 
+// Check if the character is alphanumeric
 int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	return (0);
 }
-/*
-int	main(void)
-{
-	printf("%d", ft_isalnum("_"));
-	return (0);
-}*/

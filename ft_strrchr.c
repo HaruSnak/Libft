@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// Locate the last occurrence of c in the string s
 char	*ft_strrchr(const char *s, int c)
 {
 	int	count;
@@ -25,11 +26,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-/*
-int	main(void)
-{
-	//char caractere = 'j';
-	//char *chaine = "Bonjour, je suis une chevret";
-	printf("%s", ft_strrchr("teste", '\0'));
-	return (0);
-}*/

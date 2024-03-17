@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+// Duplicate a string
 char	*ft_strdup(const char *src)
 {
 	int		i;
@@ -29,18 +30,3 @@ char	*ft_strdup(const char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-/*
-int	main(void) {
-	char *original = "Bonjour, le monde !";
-	char *copie = ft_strdup(original);
-
-	if (copie) {
-		printf("Chaine originale : %s\n", original);
-		printf("Copie : %s\n", copie);
-		free(copie);
-	} else {
-		printf("Échec de l'allocation mémoire.\n");
-	}
-
-	return (0);
-}*/

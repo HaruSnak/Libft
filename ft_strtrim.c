@@ -6,12 +6,13 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:32:14 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/11/03 16:22:00 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 18:13:48 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Remove the characters in the set from the beginning and end of the string
 int	ft_search_set(char c, char const *set)
 {
 	size_t	i;
@@ -50,25 +51,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr[i] = '\0';
 	return (ptr);
 }
-/*
-int	main(void)
-{
-	char example[] = "   Hello, World!   ";
-	char chars_to_remove[] = " \t\n";
-
-	printf("Avant strtrim: \"%s\"\n", example);
-	printf("Chars to remove: \"%s\"\n", chars_to_remove);
-
-	char *result = ft_strtrim(example, chars_to_remove);
-
-	if (result != NULL)
-	{
-		printf("Après strtrim: \"%s\"\n", result);
-		free(result);
-	}
-	else
-	{
-		printf("Une erreur s'est produite lors de l'exécution de strtrim.\n");
-	}
-	return (0);
-}*/

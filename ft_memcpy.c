@@ -6,12 +6,13 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:16:29 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/11/03 16:38:54 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 18:15:03 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Copy memory area from src to dest
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
@@ -26,17 +27,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-int	main(void)
-{
-	char src[50] = "Bonjour";
-	char dest[50];
-
-	printf("Avant memcpy, dest : %s\n", dest);
-
-	ft_memcpy(dest, src, ft_strlen(src) + 1); // Copie de src vers dest
-
-	printf("Après memcpy, dest : %s\n", dest);
-
-	return (0);
-}*/

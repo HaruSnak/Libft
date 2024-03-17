@@ -6,12 +6,13 @@
 /*   By: shmoreno <shmoreno@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 08:41:57 by shmoreno          #+#    #+#             */
-/*   Updated: 2023/11/02 17:54:47 by shmoreno         ###   ########.fr       */
+/*   Updated: 2024/03/17 18:15:30 by shmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Count the number of digits in the number
 int	ft_countnumber(int n)
 {
 	size_t	count_n;
@@ -63,15 +64,3 @@ char	*ft_itoa(int n)
 	}
 	return (ptr);
 }
-/*
-int	main(void)
-{
-	//int		num;
-	char	*str;
-
-	//num = 1;
-	str = ft_itoa(-2147483648);
-	printf("La chaine de caracteres est : %s\n", str);
-	free(str);
-	return (0);
-}*/
