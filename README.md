@@ -99,8 +99,8 @@ $ make fclean # Or make clean
 ## Development
 ### File Structure
 
-.
 ```
+.
 └── 📁libft
     └── Makefile
     └── 📁char
