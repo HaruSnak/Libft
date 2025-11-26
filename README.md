@@ -1,200 +1,435 @@
 <img src="readme/libft.png" alt="libft" width="900"/>
 
+<div align="center">
+
 # Libft
-The libft project is a compulsory project for students of school 42. It consists of creating a static library of utility functions in C language. This library must reimplement certain functions of the standard C library, as well as other functions deemed useful by the students.
+### A Comprehensive C Standard Library Implementation
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![License][license-shield]][license-url]
 
-## 📒 Index
+</div>
 
-- [About](#about)
+---
+
+## 🇬🇧 English
+
+<details>
+<summary><b>📖 Click to expand/collapse English version</b></summary>
+
+### About
+
+**Libft** is a compulsory foundational project for 42 School students. It consists of creating a static library of utility functions in C, reimplementing essential standard C library functions alongside custom utility functions.
+
+This project teaches:
+- Memory management and allocation
+- String manipulation techniques
+- Data structures (linked lists)
+- Makefile optimization
+- Code documentation and norming standards
+
+### 📋 Table of Contents
+
+- [Features](#features)
 - [Installation](#installation)
-- [Development](#development)
-  - [File Structure](#file-structure) 
-- [Notes](#notes)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Makefile Targets](#makefile-targets)
+- [Function Reference](#function-reference)
 - [Credits](#credits)
 
-## About
-**Functions contained in this library:**<br>
-<br>
+### ✨ Features
 
+- **50+ utility functions** across multiple categories
+- **Bonus linked list functions** for advanced data structure manipulation
+- **Strict C89/C99 compliance** with 42 School norming standards
+- **Fully documented** with clear purpose statements
+- **Production-ready** static library compilation
 
-### Functions from `<ctype.h>`
+### 🚀 Installation
 
-- [`ft_isalnum`](char/ft_isalnum.c) - checks for an alphanumeric character.
-- [`ft_isalpha`](char/ft_isalpha.c) - checks for an alphabetic character.
-- [`ft_isascii`](char/ft_isascii.c) - checks whether c fits into the ASCII character set.
-- [`ft_isdigit`](char/ft_isdigit.c) - checks for a digit (0 through 9).
-- [`ft_isprint`](char/ft_isprint.c) - checks for any printable character.
-- [`ft_tolower`](char/ft_tolower.c) - convert char to lowercase.
-- [`ft_toupper`](char/ft_toupper.c) - convert char to uppercase.
-
-
-### Functions from `<string.h>`
-
-- [`ft_bzero`](mem/ft_bzero.c) - zero a byte string.
-- [`ft_memchr`](mem/ft_memchr.c) - scan memory for a character.
-- [`ft_memcmp`](mem/ft_memcmp.c) - compare memory areas.
-- [`ft_memcpy`](mem/ft_memcpy.c) - copy memory area.
-- [`ft_memmove`](mem/ft_memmove.c) - copy memory area.
-- [`ft_memset`](mem/ft_memset.c) - fill memory with a constant byte.
-- [`ft_strchr`](str/ft_strchr.c) - locate character in string.
-- [`ft_strdup`](str/ft_strdup.c) - creates a duplicate for the string passed as parameter.
-- [`ft_strlcat`](str/ft_strlcat.c) - concatenate string to a specific size.
-- [`ft_strlcpy`](str/ft_strlcpy.c) - copy string to a specific size.
-- [`ft_strlen`](str/ft_strlen.c) - calculate the length of a string.
-- [`ft_strncmp`](str/ft_strncmp.c) - compare two strings.
-- [`ft_strnstr`](str/ft_strnstr.c) - locate a substring in a string.
-- [`ft_strrchr`](str/ft_strrchr.c) - locate character in string.
-
-### Functions from `<stdlib.h>`
-- [`ft_atoi`](conv/ft_atoi.c)	- convert a string to an integer.
-- [`ft_calloc`](mem/ft_calloc.c)	- allocates memory and sets its bytes' values to 0.
-
-### Non-standard functions
-- [`ft_itoa`](conv/ft_itoa.c) - converts a number into a string.
-- [`ft_putchar_fd`](put/ft_putchar_fd.c) - output a char to a file descriptor.
-- [`ft_putendl_fd`](put/ft_putendl_fd.c) - output a string to a file descriptor, followed by a new line.
-- [`ft_putnbr_fd`](put/ft_putnbr_fd.c) - output a number to a file descriptor.
-- [`ft_putstr_fd`](put/ft_putstr_fd.c) - output a string to a file descriptor.
-- [`ft_split`](str/ft_split.c) - splits a string using a char as parameter.
-- [`ft_striteri`](str/ft_striteri.c) - applies a function to each character of a string.
-- [`ft_strjoin`](str/ft_strjoin.c) - concatenates two strings.
-- [`ft_strmapi`](str/ft_strmapi.c) - applies a function to each character of a string.
-- [`ft_strtrim`](str/ft_strtrim.c) - trims the beginning and end of string with specific set of chars.
-- [`ft_substr`](str/ft_substr.c) - returns a substring from a string.
-
-
-### Linked list functions
-
-- [`ft_lstadd_back`](lst/ft_lstadd_back_bonus.c) - adds an element at the end of a list.
-- [`ft_lstadd_front`](lst/ft_lstadd_front_bonus.c) - adds an element at the beginning of a list.
-- [`ft_lstclear`](lst/ft_lstclear_bonus.c) - deletes and free list.
-- [`ft_lstdelone`](lst/ft_lstdelone_bonus.c) - deletes one element from the list.
-- [`ft_lstiter`](lst/ft_lstiter_bonus.c) - applies a function to each element of a list.
-- [`ft_lstlast`](lst/ft_lstlast_bonus.c) - returns the last element of the list.
-- [`ft_lstmap`](lst/ft_lstmap_bonus.c) - applies a function to each element of a list.
-- [`ft_lstnew`](lst/ft_lstnew_bonus.c) - creates a new list element.
-- [`ft_lstsize`](lst/ft_lstsize_bonus.c) - counts the number of elements in a list.
-
-
-## Installation
 ```bash
-# Clone this repository
-$ git clone https://github.com/HaruSnak/Libft.git
+# Clone the repository
+git clone https://github.com/HaruSnak/42-libft
+cd 42-libft
 
-# Go into the repository
-$ cd Libft
+# Compile the library
+make
 
-# To compile the program
-$ make
-
-# Allows you to do a complete cleaning of your construction environment
-$ make fclean # Or make clean
+# Compile with bonus functions
+make bonus
 ```
 
-## Usage
-To use the Libft library in your C projects:
+### 💻 Usage
 
-1. Include the header file in your source code:
-   ```c
-   #include "libft.h"
-   ```
+Include the library in your C projects:
 
-2. Compile your program linking with the library:
-   ```bash
-   gcc your_program.c libft.a -o your_program
-   ```
-
-3. Run your program:
-   ```bash
-   ./your_program
-   ```
-
-## Makefile Targets
-- `make` or `make all`: Compile the main library functions and create `libft.a`.
-- `make bonus`: Compile the bonus linked list functions and add them to `libft.a`.
-- `make clean`: Remove object files.
-- `make fclean`: Remove object files and the library file.
-- `make re`: Recompile everything from scratch.
-- `make normi`: Check norminette for main files.
-- `make normib`: Check norminette for bonus files.
-
-## Development
-### File Structure
-
-```
-.
-└── 📁libft
-    └── Makefile
-    └── 📁char
-        └── ft_isalnum.c
-        └── ft_isalpha.c
-        └── ft_isascii.c
-        └── ft_isdigit.c
-        └── ft_isprint.c
-        └── ft_tolower.c
-        └── ft_toupper.c
-    └── 📁conv
-        └── ft_atoi.c
-        └── ft_itoa.c
-    └── 📁includes
-        └── libft.h
-    └── 📁lst
-        └── ft_lstadd_back_bonus.c
-        └── ft_lstadd_front_bonus.c
-        └── ft_lstclear_bonus.c
-        └── ft_lstdelone_bonus.c
-        └── ft_lstiter_bonus.c
-        └── ft_lstlast_bonus.c
-        └── ft_lstmap_bonus.c
-        └── ft_lstnew_bonus.c
-        └── ft_lstsize_bonus.c
-    └── 📁mem
-        └── ft_bzero.c
-        └── ft_calloc.c
-        └── ft_memchr.c
-        └── ft_memcmp.c
-        └── ft_memcpy.c
-        └── ft_memmove.c
-        └── ft_memset.c
-    └── 📁put
-        └── ft_putchar_fd.c
-        └── ft_putendl_fd.c
-        └── ft_putnbr_fd.c
-        └── ft_putstr_fd.c
-    └── 📁str
-        └── ft_split.c
-        └── ft_strchr.c
-        └── ft_strdup.c
-        └── ft_striteri.c
-        └── ft_strjoin.c
-        └── ft_strlcat.c
-        └── ft_strlcpy.c
-        └── ft_strlen.c
-        └── ft_strmapi.c
-        └── ft_strncmp.c
-        └── ft_strnstr.c
-        └── ft_strrchr.c
-        └── ft_strtrim.c
-        └── ft_substr.c
+```c
+#include "libft.h"
 ```
 
-## Notes
+Compile your program linking against the library:
+
+```bash
+gcc your_program.c libft.a -o your_program
+./your_program
+```
+
+### 📂 Project Structure
+
+```
+libft/
+├── Makefile                 # Build configuration
+├── includes/
+│   └── libft.h             # Main header file
+├── char/                   # Character type functions
+│   ├── ft_isalnum.c
+│   ├── ft_isalpha.c
+│   ├── ft_isascii.c
+│   ├── ft_isdigit.c
+│   ├── ft_isprint.c
+│   ├── ft_tolower.c
+│   └── ft_toupper.c
+├── conv/                   # Conversion functions
+│   ├── ft_atoi.c
+│   └── ft_itoa.c
+├── mem/                    # Memory manipulation
+│   ├── ft_bzero.c
+│   ├── ft_calloc.c
+│   ├── ft_memchr.c
+│   ├── ft_memcmp.c
+│   ├── ft_memcpy.c
+│   ├── ft_memmove.c
+│   └── ft_memset.c
+├── str/                    # String manipulation
+│   ├── ft_split.c
+│   ├── ft_strchr.c
+│   ├── ft_strdup.c
+│   ├── ft_striteri.c
+│   ├── ft_strjoin.c
+│   ├── ft_strlcat.c
+│   ├── ft_strlcpy.c
+│   ├── ft_strlen.c
+│   ├── ft_strmapi.c
+│   ├── ft_strncmp.c
+│   ├── ft_strnstr.c
+│   ├── ft_strrchr.c
+│   ├── ft_strtrim.c
+│   └── ft_substr.c
+├── put/                    # Output functions
+│   ├── ft_putchar_fd.c
+│   ├── ft_putendl_fd.c
+│   ├── ft_putnbr_fd.c
+│   └── ft_putstr_fd.c
+└── lst/                    # Linked list (bonus)
+    ├── ft_lstadd_back_bonus.c
+    ├── ft_lstadd_front_bonus.c
+    ├── ft_lstclear_bonus.c
+    ├── ft_lstdelone_bonus.c
+    ├── ft_lstiter_bonus.c
+    ├── ft_lstlast_bonus.c
+    ├── ft_lstmap_bonus.c
+    ├── ft_lstnew_bonus.c
+    └── ft_lstsize_bonus.c
+```
+
+### 🛠️ Makefile Targets
+
+| Target | Description |
+|--------|-------------|
+| `make` or `make all` | Compile library and create `libft.a` |
+| `make bonus` | Add bonus linked list functions |
+| `make clean` | Remove object files |
+| `make fclean` | Remove object files and library |
+| `make re` | Full recompilation |
+| `make normi` | Check norminette compliance (main) |
+| `make normib` | Check norminette compliance (bonus) |
+
+### 📚 Function Reference
+
+#### Character Functions (`<ctype.h>`)
+- [`ft_isalnum`](char/ft_isalnum.c) - Check for alphanumeric character
+- [`ft_isalpha`](char/ft_isalpha.c) - Check for alphabetic character
+- [`ft_isascii`](char/ft_isascii.c) - Check if character is ASCII
+- [`ft_isdigit`](char/ft_isdigit.c) - Check for digit (0-9)
+- [`ft_isprint`](char/ft_isprint.c) - Check for printable character
+- [`ft_tolower`](char/ft_tolower.c) - Convert character to lowercase
+- [`ft_toupper`](char/ft_toupper.c) - Convert character to uppercase
+
+#### String Functions (`<string.h>`)
+- [`ft_strchr`](str/ft_strchr.c) - Locate character in string
+- [`ft_strlen`](str/ft_strlen.c) - Get string length
+- [`ft_strdup`](str/ft_strdup.c) - Duplicate string
+- [`ft_strlcpy`](str/ft_strlcpy.c) - Copy string with size limit
+- [`ft_strlcat`](str/ft_strlcat.c) - Concatenate strings with size limit
+- [`ft_strncmp`](str/ft_strncmp.c) - Compare strings (limited)
+- [`ft_strnstr`](str/ft_strnstr.c) - Locate substring
+- [`ft_strrchr`](str/ft_strrchr.c) - Find last character occurrence
+- [`ft_split`](str/ft_split.c) - Split string by delimiter
+- [`ft_strjoin`](str/ft_strjoin.c) - Concatenate two strings
+- [`ft_strtrim`](str/ft_strtrim.c) - Trim characters from ends
+- [`ft_substr`](str/ft_substr.c) - Extract substring
+- [`ft_strmapi`](str/ft_strmapi.c) - Apply function to each character
+- [`ft_striteri`](str/ft_striteri.c) - Apply function with index
+
+#### Memory Functions (`<string.h>`)
+- [`ft_memset`](mem/ft_memset.c) - Fill memory with constant byte
+- [`ft_memcpy`](mem/ft_memcpy.c) - Copy memory area
+- [`ft_memmove`](mem/ft_memmove.c) - Copy memory (overlapping safe)
+- [`ft_memchr`](mem/ft_memchr.c) - Find byte in memory
+- [`ft_memcmp`](mem/ft_memcmp.c) - Compare memory areas
+- [`ft_bzero`](mem/ft_bzero.c) - Clear memory
+- [`ft_calloc`](mem/ft_calloc.c) - Allocate and zero memory
+
+#### Conversion Functions (`<stdlib.h>`)
+- [`ft_atoi`](conv/ft_atoi.c) - Convert string to integer
+- [`ft_itoa`](conv/ft_itoa.c) - Convert integer to string
+
+#### Output Functions (Non-standard)
+- [`ft_putchar_fd`](put/ft_putchar_fd.c) - Write character to file descriptor
+- [`ft_putstr_fd`](put/ft_putstr_fd.c) - Write string to file descriptor
+- [`ft_putendl_fd`](put/ft_putendl_fd.c) - Write string + newline to file descriptor
+- [`ft_putnbr_fd`](put/ft_putnbr_fd.c) - Write number to file descriptor
+
+#### Linked List Functions (Bonus)
+- [`ft_lstnew`](lst/ft_lstnew_bonus.c) - Create new list element
+- [`ft_lstadd_front`](lst/ft_lstadd_front_bonus.c) - Add element to list front
+- [`ft_lstadd_back`](lst/ft_lstadd_back_bonus.c) - Add element to list back
+- [`ft_lstlast`](lst/ft_lstlast_bonus.c) - Get last list element
+- [`ft_lstsize`](lst/ft_lstsize_bonus.c) - Count list elements
+- [`ft_lstdelone`](lst/ft_lstdelone_bonus.c) - Delete single element
+- [`ft_lstclear`](lst/ft_lstclear_bonus.c) - Delete entire list
+- [`ft_lstiter`](lst/ft_lstiter_bonus.c) - Apply function to each element
+- [`ft_lstmap`](lst/ft_lstmap_bonus.c) - Apply function and create new list
+
+### 👨‍🎓 Note
 <p align="left">
     <img src="https://image.noelshack.com/fichiers/2024/11/2/1710270009-125.png"
-         alt="Sponsored by Evil Martians" width="180" height="164">
+         alt="Note" width="180" height="164">
 </p>
 
-## Credits
+### 📖 Credits
 
-Below you will find the links used for this project:
+- **42 School Norm**: [Official C Coding Standard](https://cdn.intra.42.fr/pdf/pdf/960/norme.en.pdf)
 
-- [Norm 42](https://cdn.intra.42.fr/pdf/pdf/960/norme.en.pdf)
+### 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+</details>
+
+---
+
+## 🇫🇷 Français
+
+<details>
+<summary><b>📖 Cliquez pour développer/réduire la version française</b></summary>
+
+### À propos
+
+**Libft** est un projet fondamental obligatoire pour les étudiants de l'école 42. Il s'agit de créer une bibliothèque statique de fonctions utilitaires en C, réimplémentant les fonctions essentielles de la librairie standard C avec des fonctions utilitaires personnalisées.
+
+Ce projet enseigne :
+- La gestion de la mémoire et l'allocation dynamique
+- Les techniques de manipulation de chaînes
+- Les structures de données (listes chaînées)
+- L'optimisation des Makefiles
+- La documentation du code et les normes de programmation
+
+### 📋 Table des matières
+
+- [Caractéristiques](#caractéristiques)
+- [Installation](#installation-1)
+- [Utilisation](#utilisation)
+- [Structure du projet](#structure-du-projet)
+- [Cibles du Makefile](#cibles-du-makefile)
+- [Référence des fonctions](#référence-des-fonctions)
+- [Crédits](#crédits-1)
+
+### ✨ Caractéristiques
+
+- **Plus de 50 fonctions utilitaires** réparties dans plusieurs catégories
+- **Fonctions de listes chaînées bonus** pour la manipulation avancée de structures de données
+- **Conformité stricte C89/C99** avec les normes de l'école 42
+- **Entièrement documentées** avec des descriptions claires
+- **Prêtes pour la production** avec compilation en bibliothèque statique
+
+### 🚀 Installation
+
+```bash
+# Cloner le dépôt
+git clone https://github.com/HaruSnak/Libft.git
+cd Libft
+
+# Compiler la bibliothèque
+make
+
+# Compiler avec les fonctions bonus
+make bonus
+```
+
+### 💻 Utilisation
+
+Incluez la bibliothèque dans vos projets C :
+
+```c
+#include "libft.h"
+```
+
+Compilez votre programme en le liant à la bibliothèque :
+
+```bash
+gcc your_program.c libft.a -o your_program
+./your_program
+```
+
+### 📂 Structure du projet
+
+```
+libft/
+├── Makefile                 # Configuration de compilation
+├── includes/
+│   └── libft.h             # Fichier d'en-tête principal
+├── char/                   # Fonctions de type caractère
+│   ├── ft_isalnum.c
+│   ├── ft_isalpha.c
+│   ├── ft_isascii.c
+│   ├── ft_isdigit.c
+│   ├── ft_isprint.c
+│   ├── ft_tolower.c
+│   └── ft_toupper.c
+├── conv/                   # Fonctions de conversion
+│   ├── ft_atoi.c
+│   └── ft_itoa.c
+├── mem/                    # Manipulation de mémoire
+│   ├── ft_bzero.c
+│   ├── ft_calloc.c
+│   ├── ft_memchr.c
+│   ├── ft_memcmp.c
+│   ├── ft_memcpy.c
+│   ├── ft_memmove.c
+│   └── ft_memset.c
+├── str/                    # Manipulation de chaînes
+│   ├── ft_split.c
+│   ├── ft_strchr.c
+│   ├── ft_strdup.c
+│   ├── ft_striteri.c
+│   ├── ft_strjoin.c
+│   ├── ft_strlcat.c
+│   ├── ft_strlcpy.c
+│   ├── ft_strlen.c
+│   ├── ft_strmapi.c
+│   ├── ft_strncmp.c
+│   ├── ft_strnstr.c
+│   ├── ft_strrchr.c
+│   ├── ft_strtrim.c
+│   └── ft_substr.c
+├── put/                    # Fonctions de sortie
+│   ├── ft_putchar_fd.c
+│   ├── ft_putendl_fd.c
+│   ├── ft_putnbr_fd.c
+│   └── ft_putstr_fd.c
+└── lst/                    # Listes chaînées (bonus)
+    ├── ft_lstadd_back_bonus.c
+    ├── ft_lstadd_front_bonus.c
+    ├── ft_lstclear_bonus.c
+    ├── ft_lstdelone_bonus.c
+    ├── ft_lstiter_bonus.c
+    ├── ft_lstlast_bonus.c
+    ├── ft_lstmap_bonus.c
+    ├── ft_lstnew_bonus.c
+    └── ft_lstsize_bonus.c
+```
+
+### 🛠️ Cibles du Makefile
+
+| Cible | Description |
+|-------|-------------|
+| `make` ou `make all` | Compiler la bibliothèque et créer `libft.a` |
+| `make bonus` | Ajouter les fonctions bonus de listes chaînées |
+| `make clean` | Supprimer les fichiers objets |
+| `make fclean` | Supprimer les fichiers objets et la bibliothèque |
+| `make re` | Recompilation complète |
+| `make normi` | Vérifier la conformité norminette (principal) |
+| `make normib` | Vérifier la conformité norminette (bonus) |
+
+### 📚 Référence des fonctions
+
+#### Fonctions de caractère (`<ctype.h>`)
+- [`ft_isalnum`](char/ft_isalnum.c) - Vérifier si alphanumétique
+- [`ft_isalpha`](char/ft_isalpha.c) - Vérifier si alphabétique
+- [`ft_isascii`](char/ft_isascii.c) - Vérifier si ASCII
+- [`ft_isdigit`](char/ft_isdigit.c) - Vérifier si chiffre (0-9)
+- [`ft_isprint`](char/ft_isprint.c) - Vérifier si imprimable
+- [`ft_tolower`](char/ft_tolower.c) - Convertir en minuscule
+- [`ft_toupper`](char/ft_toupper.c) - Convertir en majuscule
+
+#### Fonctions de chaîne (`<string.h>`)
+- [`ft_strchr`](str/ft_strchr.c) - Localiser caractère dans chaîne
+- [`ft_strlen`](str/ft_strlen.c) - Obtenir longueur de chaîne
+- [`ft_strdup`](str/ft_strdup.c) - Dupliquer chaîne
+- [`ft_strlcpy`](str/ft_strlcpy.c) - Copier chaîne avec limite de taille
+- [`ft_strlcat`](str/ft_strlcat.c) - Concaténer chaînes avec limite de taille
+- [`ft_strncmp`](str/ft_strncmp.c) - Comparer chaînes (limitées)
+- [`ft_strnstr`](str/ft_strnstr.c) - Localiser sous-chaîne
+- [`ft_strrchr`](str/ft_strrchr.c) - Trouver dernière occurrence de caractère
+- [`ft_split`](str/ft_split.c) - Diviser chaîne par délimiteur
+- [`ft_strjoin`](str/ft_strjoin.c) - Concaténer deux chaînes
+- [`ft_strtrim`](str/ft_strtrim.c) - Supprimer caractères des extrémités
+- [`ft_substr`](str/ft_substr.c) - Extraire sous-chaîne
+- [`ft_strmapi`](str/ft_strmapi.c) - Appliquer fonction à chaque caractère
+- [`ft_striteri`](str/ft_striteri.c) - Appliquer fonction avec index
+
+#### Fonctions de mémoire (`<string.h>`)
+- [`ft_memset`](mem/ft_memset.c) - Remplir mémoire avec octet constant
+- [`ft_memcpy`](mem/ft_memcpy.c) - Copier zone mémoire
+- [`ft_memmove`](mem/ft_memmove.c) - Copier mémoire (chevauchement sûr)
+- [`ft_memchr`](mem/ft_memchr.c) - Trouver octet en mémoire
+- [`ft_memcmp`](mem/ft_memcmp.c) - Comparer zones mémoire
+- [`ft_bzero`](mem/ft_bzero.c) - Effacer mémoire
+- [`ft_calloc`](mem/ft_calloc.c) - Allouer et initialiser à zéro mémoire
+
+#### Fonctions de conversion (`<stdlib.h>`)
+- [`ft_atoi`](conv/ft_atoi.c) - Convertir chaîne en entier
+- [`ft_itoa`](conv/ft_itoa.c) - Convertir entier en chaîne
+
+#### Fonctions de sortie (Non-standard)
+- [`ft_putchar_fd`](put/ft_putchar_fd.c) - Écrire caractère sur descripteur fichier
+- [`ft_putstr_fd`](put/ft_putstr_fd.c) - Écrire chaîne sur descripteur fichier
+- [`ft_putendl_fd`](put/ft_putendl_fd.c) - Écrire chaîne + nouvelle ligne
+- [`ft_putnbr_fd`](put/ft_putnbr_fd.c) - Écrire nombre sur descripteur fichier
+
+#### Fonctions de listes chaînées (Bonus)
+- [`ft_lstnew`](lst/ft_lstnew_bonus.c) - Créer nouvel élément de liste
+- [`ft_lstadd_front`](lst/ft_lstadd_front_bonus.c) - Ajouter élément en tête
+- [`ft_lstadd_back`](lst/ft_lstadd_back_bonus.c) - Ajouter élément en queue
+- [`ft_lstlast`](lst/ft_lstlast_bonus.c) - Obtenir dernier élément
+- [`ft_lstsize`](lst/ft_lstsize_bonus.c) - Compter éléments de liste
+- [`ft_lstdelone`](lst/ft_lstdelone_bonus.c) - Supprimer un élément
+- [`ft_lstclear`](lst/ft_lstclear_bonus.c) - Supprimer toute la liste
+- [`ft_lstiter`](lst/ft_lstiter_bonus.c) - Appliquer fonction à chaque élément
+- [`ft_lstmap`](lst/ft_lstmap_bonus.c) - Appliquer fonction et créer nouvelle liste
+
+### 👨‍🎓 Note
+<p align="left">
+    <img src="https://image.noelshack.com/fichiers/2024/11/2/1710270009-125.png"
+         alt="Note" width="180" height="164">
+</p>
+
+### 📖 Crédits
+
+- **Norme 42**: [Standard C officiel](https://cdn.intra.42.fr/pdf/pdf/960/norme.en.pdf)
+
+### 📄 Licence
+
+Ce projet est sous licence **MIT** - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+</details>
+
+---
 
 [contributors-shield]: https://img.shields.io/github/contributors/HaruSnak/Libft.svg?style=for-the-badge
 [contributors-url]: https://github.com/HaruSnak/Libft/graphs/contributors
@@ -206,7 +441,5 @@ Below you will find the links used for this project:
 [issues-url]: https://github.com/HaruSnak/Libft/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/shany-moreno-5a863b2aa
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+[license-shield]: https://img.shields.io/github/license/HaruSnak/Libft.svg?style=for-the-badge
+[license-url]: https://github.com/HaruSnak/Libft/blob/master/LICENSE
