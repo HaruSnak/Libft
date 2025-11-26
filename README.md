@@ -1,4 +1,4 @@
-<img src="readme/libft.png" alt="libft" width="1000"/>
+<img src="readme/libft.png" alt="libft" width="900"/>
 
 # Libft
 The libft project is a compulsory project for students of school 42. It consists of creating a static library of utility functions in C language. This library must reimplement certain functions of the standard C library, as well as other functions deemed useful by the students.
@@ -42,8 +42,8 @@ The libft project is a compulsory project for students of school 42. It consists
 - [`ft_memcpy`](mem/ft_memcpy.c) - copy memory area.
 - [`ft_memmove`](mem/ft_memmove.c) - copy memory area.
 - [`ft_memset`](mem/ft_memset.c) - fill memory with a constant byte.
-- [`ft_strchr`](ft_strchr.c) - locate character in string.
-- [`ft_strdup`](ft_strdup.c) - creates a duplicate for the string passed as parameter.
+- [`ft_strchr`](str/ft_strchr.c) - locate character in string.
+- [`ft_strdup`](str/ft_strdup.c) - creates a duplicate for the string passed as parameter.
 - [`ft_strlcat`](str/ft_strlcat.c) - concatenate string to a specific size.
 - [`ft_strlcpy`](str/ft_strlcpy.c) - copy string to a specific size.
 - [`ft_strlen`](str/ft_strlen.c) - calculate the length of a string.
@@ -71,14 +71,15 @@ The libft project is a compulsory project for students of school 42. It consists
 
 ### Linked list functions
 
-- [`ft_lstadd_back`](lst/ft_lstadd_back.c) - adds an element at the end of a list.
-- [`ft_lstadd_front`](lst/ft_lstadd_front.c) - adds an element at the beginning of a list.
-- [`ft_lstclear`](lst/ft_lstclear.c) - deletes and free list.
-- [`ft_lstiter`](lst/ft_lstiter.c) - applies a function to each element of a list.
-- [`ft_lstlast`](lst/ft_lstlast.c) - returns the last element of the list.
-- [`ft_lstmap`](lst/ft_lstmap.c) - applies a function to each element of a list.
-- [`ft_lstnew`](lst/ft_lstnew.c) - creates a new list element.
-- [`ft_lstsize`](lst/ft_lstsize.c) - counts the number of elements in a list.
+- [`ft_lstadd_back`](lst/ft_lstadd_back_bonus.c) - adds an element at the end of a list.
+- [`ft_lstadd_front`](lst/ft_lstadd_front_bonus.c) - adds an element at the beginning of a list.
+- [`ft_lstclear`](lst/ft_lstclear_bonus.c) - deletes and free list.
+- [`ft_lstdelone`](lst/ft_lstdelone_bonus.c) - deletes one element from the list.
+- [`ft_lstiter`](lst/ft_lstiter_bonus.c) - applies a function to each element of a list.
+- [`ft_lstlast`](lst/ft_lstlast_bonus.c) - returns the last element of the list.
+- [`ft_lstmap`](lst/ft_lstmap_bonus.c) - applies a function to each element of a list.
+- [`ft_lstnew`](lst/ft_lstnew_bonus.c) - creates a new list element.
+- [`ft_lstsize`](lst/ft_lstsize_bonus.c) - counts the number of elements in a list.
 
 
 ## Installation
@@ -95,6 +96,33 @@ $ make
 # Allows you to do a complete cleaning of your construction environment
 $ make fclean # Or make clean
 ```
+
+## Usage
+To use the Libft library in your C projects:
+
+1. Include the header file in your source code:
+   ```c
+   #include "libft.h"
+   ```
+
+2. Compile your program linking with the library:
+   ```bash
+   gcc your_program.c libft.a -o your_program
+   ```
+
+3. Run your program:
+   ```bash
+   ./your_program
+   ```
+
+## Makefile Targets
+- `make` or `make all`: Compile the main library functions and create `libft.a`.
+- `make bonus`: Compile the bonus linked list functions and add them to `libft.a`.
+- `make clean`: Remove object files.
+- `make fclean`: Remove object files and the library file.
+- `make re`: Recompile everything from scratch.
+- `make normi`: Check norminette for main files.
+- `make normib`: Check norminette for bonus files.
 
 ## Development
 ### File Structure
@@ -159,7 +187,7 @@ $ make fclean # Or make clean
 ## Notes
 <p align="left">
     <img src="https://image.noelshack.com/fichiers/2024/11/2/1710270009-125.png"
-         alt="Sponsored by Evil Martians" width="216" height="164">
+         alt="Sponsored by Evil Martians" width="180" height="164">
 </p>
 
 ## Credits
@@ -178,3 +206,7 @@ Below you will find the links used for this project:
 [issues-url]: https://github.com/HaruSnak/Libft/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/shany-moreno-5a863b2aa
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
