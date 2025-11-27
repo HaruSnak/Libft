@@ -51,6 +51,8 @@ This project teaches:
 - **Fully documented** with clear purpose statements
 - **Production-ready** static library compilation
 
+<a name="installation"></a>
+
 ### 🚀 Installation
 
 ```bash
@@ -64,6 +66,8 @@ make
 # Compile with bonus functions
 make bonus
 ```
+
+<a name="usage"></a>
 
 ### 💻 Usage
 
@@ -79,6 +83,8 @@ Compile your program linking against the library:
 gcc your_program.c libft.a -o your_program
 ./your_program
 ```
+
+<a name="project-structure"></a>
 
 ### 📂 Project Structure
 
@@ -138,6 +144,8 @@ libft/
     └── ft_lstsize_bonus.c
 ```
 
+<a name="makefile-targets"></a>
+
 ### 🛠️ Makefile Targets
 
 | Target | Description |
@@ -149,6 +157,8 @@ libft/
 | `make re` | Full recompilation |
 | `make normi` | Check norminette compliance (main) |
 | `make normib` | Check norminette compliance (bonus) |
+
+<a name="function-reference"></a>
 
 ### 📚 Function Reference
 
@@ -213,6 +223,8 @@ libft/
          alt="Note" width="180" height="164">
 </p>
 
+<a name="credits"></a>
+
 ### 📖 Credits
 
 - **42 School Norm**: [Official C Coding Standard](https://cdn.intra.42.fr/pdf/pdf/960/norme.en.pdf)
@@ -251,6 +263,8 @@ Ce projet enseigne :
 - [Référence des fonctions](#référence-des-fonctions)
 - [Crédits](#crédits-1)
 
+<a name="caractéristiques"></a>
+
 ### ✨ Caractéristiques
 
 - **Plus de 50 fonctions utilitaires** réparties dans plusieurs catégories
@@ -258,6 +272,8 @@ Ce projet enseigne :
 - **Conformité stricte C89/C99** avec les normes de l'école 42
 - **Entièrement documentées** avec des descriptions claires
 - **Prêtes pour la production** avec compilation en bibliothèque statique
+
+<a name="installation-1"></a>
 
 ### 🚀 Installation
 
@@ -273,6 +289,8 @@ make
 make bonus
 ```
 
+<a name="utilisation"></a>
+
 ### 💻 Utilisation
 
 Incluez la bibliothèque dans vos projets C :
@@ -287,6 +305,8 @@ Compilez votre programme en le liant à la bibliothèque :
 gcc your_program.c libft.a -o your_program
 ./your_program
 ```
+
+<a name="structure-du-projet"></a>
 
 ### 📂 Structure du projet
 
@@ -345,6 +365,7 @@ libft/
     ├── ft_lstnew_bonus.c
     └── ft_lstsize_bonus.c
 ```
+<a name="cibles-du-makefile"></a>
 
 ### 🛠️ Cibles du Makefile
 
@@ -357,6 +378,8 @@ libft/
 | `make re` | Recompilation complète |
 | `make normi` | Vérifier la conformité norminette (principal) |
 | `make normib` | Vérifier la conformité norminette (bonus) |
+
+<a name="référence-des-fonctions"></a>
 
 ### 📚 Référence des fonctions
 
@@ -420,6 +443,8 @@ libft/
     <img src="https://image.noelshack.com/fichiers/2024/11/2/1710270009-125.png"
          alt="Note" width="180" height="164">
 </p>
+
+<a name="crédits-1"></a>
 
 ### 📖 Crédits
 
