@@ -41,6 +41,8 @@ This project teaches:
 - [Function Reference](#function-reference)
 - [Credits](#credits)
 
+<a name="features"></a>
+
 ### ✨ Features
 
 - **50+ utility functions** across multiple categories
